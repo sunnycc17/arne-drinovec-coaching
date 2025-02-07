@@ -1,0 +1,22 @@
+{
+  "name": "arne-drinovec-coaching",
+  "version": "1.0.0",
+  "description": "a fitness instructor website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunnycc17/arne-drinovec-coaching.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sunnycc17/arne-drinovec-coaching/issues"
+  },
+  "homepage": "https://github.com/sunnycc17/arne-drinovec-coaching#readme"
+}
