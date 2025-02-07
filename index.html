@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Trainer | Arne Drinovec</title>
     <link rel="stylesheet" href="src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <script src="//unpkg.com/alpinejs" defer></script>
   </head>
   <body class="bg-black text-white overflow-x-hidden" x-data="{ open: false }">
@@ -35,7 +43,10 @@
             >Contact</a
           >
         </div>
-        <button class="md:hidden p-2 text-white hover:cursor-pointer hover:text-gray-300" @click="open = !open">
+        <button
+          class="md:hidden p-2 text-white hover:cursor-pointer hover:text-gray-300"
+          @click="open = !open"
+        >
           Menu
         </button>
       </nav>
@@ -53,19 +64,19 @@
         >
         <a
           href="#about"
-          class="block px-4 py-2 text-sm font-semibold text-white transition-transform duration-300 hover:translate-x-2 hover:text-gray-300""
+          class="block px-4 py-2 text-sm font-semibold text-white transition-transform duration-300 hover:translate-x-2 hover:text-gray-300"
           @click="open = false"
           >About</a
         >
         <a
           href="#services"
-          class="block px-4 py-2 text-sm font-semibold text-white transition-transform duration-300 hover:translate-x-2 hover:text-gray-300""
+          class="block px-4 py-2 text-sm font-semibold text-white transition-transform duration-300 hover:translate-x-2 hover:text-gray-300"
           @click="open = false"
           >Services</a
         >
         <a
           href="#contact"
-          class="block px-4 py-2 text-sm font-semibold text-white transition-transform duration-300 hover:translate-x-2 hover:text-gray-300""
+          class="block px-4 py-2 text-sm font-semibold text-white transition-transform duration-300 hover:translate-x-2 hover:text-gray-300"
           @click="open = false"
           >Contact</a
         >
@@ -103,12 +114,63 @@
       </h2>
     </section>
 
-    <section id="contact" class="py-20 px-6 text-center bg-purple-900">
+    <!-- <section id="contact" class="py-20 px-6 text-center bg-purple-900">
       <h2 class="text-3xl font-bold">Contact Me</h2>
       <p class="mt-4 max-w-2xl mx-auto">
         Get in touch for coaching inquiries and start your fitness journey
         today!
       </p>
-    </section>
+    </section> -->
+
+    <footer class="p-10 text-center border-t border-indigo-900">
+      <p data-aos="zoom-in" class="text-lg text-gray-400 mb-4">
+        Follow on Social Media
+      </p>
+      <div class="flex justify-center gap-6 text-lg sm:text-2xl">
+        <a
+          data-aos="zoom-in"
+          data-aos-delay="300"
+          target="_blank"
+          href="#"
+          class="rounded-md text-white hover:scale-105 transition-transform duration-300"
+          ><i class="ri-tiktok-line"></i>TikTok</a
+        >
+        <a
+          data-aos="zoom-in"
+          data-aos-delay="400"
+          target="_blank"
+          href="https://www.instagram.com/arne_drinovec/"
+          class="rounded-md bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300"
+          ><i class="ri-instagram-line"></i>Instagram</a
+        >
+        <a
+          data-aos="zoom-in"
+          data-aos-delay="500"
+          target="_blank"
+          href="#"
+          class="rounded-md text-red-500 hover:scale-105 transition-transform duration-300"
+          ><i class="ri-youtube-line"></i>YouTube</a
+        >
+      </div>
+      <p class="text-gray-600 text-sm mt-4">
+        © 2025 Arne Drinovec. All Rights Reserved.
+      </p>
+      <p title="Thanks for visiting" class="text-yellow-100 text-sm mt-4">
+        Developed with love by
+        <a target="_blank" href="https://www.instagram.com/sunnycc17_/"
+          ><i>sunny.</i></a
+        >
+      </p>
+    </footer>
   </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 600, // Animation duration in milliseconds (default: 400)
+      easing: "ease-in-out", // Animation easing type
+      delay: 200, // Delay before animation starts (in ms)
+      once: true, // Whether animation should happen only once
+    });
+  </script>
 </html>
