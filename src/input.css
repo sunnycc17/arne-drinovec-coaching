@@ -3,3 +3,8 @@
 [x-cloak] {
   display: none !important;
 }
+.parallax {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
