@@ -34,215 +34,361 @@
   </head>
   <body class="bg-black text-white overflow-x-hidden" x-data="{ open: false }">
     <!-- HEADER N NAVI BAR -->
-    <header
-      class="relative z-20 bg-gradient-to-r from-purple-900/20 to-amber-300/80 border border-amber-100"
-    >
+    <header class="relative z-20 bg-black border-b border-gray-700">
       <nav
         class="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-6"
       >
-        <h1 class="text-xl font-bold">Arne Drinovec Coaching</h1>
+        <h1 class="text-xl font-bold text-white tracking-wide uppercase">
+          Arne Drinovec Coaching
+        </h1>
         <div class="hidden md:flex md:gap-x-10">
-          <a href="#home" class="px-2 text-sm font-semibold hover:text-gray-300"
-            >Home</a
+          <a
+            href="#home"
+            class="px-2 text-sm font-semibold text-white hover:text-red-500 transition-all duration-200"
           >
+            Home
+          </a>
           <a
             href="#about"
-            class="px-2 text-sm font-semibold hover:text-gray-300"
-            >About</a
+            class="px-2 text-sm font-semibold text-white hover:text-red-500 transition-all duration-200"
           >
+            About
+          </a>
           <a
             href="#services"
-            class="px-2 text-sm font-semibold hover:text-gray-300"
-            >Services</a
+            class="px-2 text-sm font-semibold text-white hover:text-red-500 transition-all duration-200"
           >
+            Services
+          </a>
           <a
             href="#contact"
-            class="px-2 text-sm font-semibold hover:text-gray-300"
-            >Contact</a
+            class="px-2 text-sm font-semibold text-white hover:text-red-500 transition-all duration-200"
           >
+            Contact
+          </a>
         </div>
         <button
-          class="md:hidden p-2 text-white hover:cursor-pointer hover:text-gray-300"
+          class="md:hidden p-2 text-white hover:text-red-500 transition-all duration-200"
           @click="open = !open"
         >
           Menu
         </button>
       </nav>
+
+      <!-- Mobile Navigation -->
       <div
-        class="md:hidden absolute top-full left-0 w-full bg-gradient-to-r from-gray-900/20 to-amber-300/80 border-b border-amber-100 p-4"
+        class="md:hidden absolute top-full left-0 w-full bg-black border-b border-gray-700 p-4"
         x-show="open"
         x-transition
         x-cloak
       >
         <a
           href="#home"
-          class="block px-4 py-2 text-sm font-semibold text-white transition-transform duration-300 hover:translate-x-2 hover:text-gray-300"
+          class="block px-4 py-2 text-sm font-semibold text-white hover:text-red-500 transition-transform duration-300 hover:translate-x-2"
           @click="open = false"
-          >Home</a
         >
+          Home
+        </a>
         <a
           href="#about"
-          class="block px-4 py-2 text-sm font-semibold text-white transition-transform duration-300 hover:translate-x-2 hover:text-gray-300"
+          class="block px-4 py-2 text-sm font-semibold text-white hover:text-red-500 transition-transform duration-300 hover:translate-x-2"
           @click="open = false"
-          >About</a
         >
+          About
+        </a>
         <a
           href="#services"
-          class="block px-4 py-2 text-sm font-semibold text-white transition-transform duration-300 hover:translate-x-2 hover:text-gray-300"
+          class="block px-4 py-2 text-sm font-semibold text-white hover:text-red-500 transition-transform duration-300 hover:translate-x-2"
           @click="open = false"
-          >Services</a
         >
+          Services
+        </a>
         <a
           href="#contact"
-          class="block px-4 py-2 text-sm font-semibold text-white transition-transform duration-300 hover:translate-x-2 hover:text-gray-300"
+          class="block px-4 py-2 text-sm font-semibold text-white hover:text-red-500 transition-transform duration-300 hover:translate-x-2"
           @click="open = false"
-          >Contact</a
         >
+          Contact
+        </a>
       </div>
     </header>
+
     <!-- HERO SECTION -->
     <section
       id="home"
-      class="h-screen flex flex-col justify-center items-center text-center text-wrap text-white parallax"
+      class="h-screen flex flex-col justify-center items-center text-center text-white parallax relative bg-black bg-cover bg-center"
       style="background-image: url('public/arne.webp')"
     >
-      <h2
-        data-aos="zoom-in"
-        class="text-2xl font-semibold p-4 rounded-lg bg-black/20 sm:text-4xl sm:font-bold"
-      >
-        Achieve Your Fitness Goals
-      </h2>
+      <div class="absolute inset-0 bg-black/20"></div>
+      <!-- Dark Overlay -->
 
-      <a
-        data-aos="zoom-in"
-        href="#contact"
-        class="mt-6 inline-block px-6 py-3 text-lg font-bold text-white bg-gradient-to-b from-purple-900/30 to-indigo-900 border border-purple-700 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-yellow-200/40"
-      >
-        Start Now!
-      </a>
+      <div class="relative z-10 max-w-3xl px-6">
+        <h2
+          data-aos="zoom-in"
+          class="text-3xl sm:text-5xl font-extrabold uppercase tracking-wide text-white p-4 rounded-lg bg-red-700/20 shadow-lg"
+        >
+          Unleash Your True Strength
+        </h2>
+
+        <p class="mt-4 text-lg font-semibold text-gray-300">
+          Train with <span class="text-red-500 font-bold">Arne</span> – Build.
+          Transform. Dominate.
+        </p>
+
+        <a
+          data-aos="zoom-in"
+          href="#contact"
+          class="mt-6 inline-block px-8 py-4 text-lg font-bold text-black uppercase bg-red-600 border border-red-800 rounded-lg shadow-lg transition-all duration-300 hover:scale-110 hover:bg-red-700 hover:shadow-red-500/50"
+        >
+          Start Now!
+        </a>
+      </div>
     </section>
+
     <!-- ABOUT -->
     <section
       id="about"
-      class="py-20 px-6 text-center bg-gradient-to-r from-purple-900/20 to-amber-300/80 border-t border-b border-amber-100"
+      class="py-20 px-6 text-center bg-black border-t border-b border-gray-700"
     >
-      <h2 class="text-3xl font-bold">About Me</h2>
-      <p class="mt-4 max-w-2xl mx-auto">
-        I am Arne Drinovec, a certified personal trainer dedicated to helping
-        you achieve your fitness goals through customized coaching and guidance.
-      </p>
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl font-extrabold text-white tracking-wide uppercase">
+          About Me
+        </h2>
+        <p class="mt-6 text-lg leading-relaxed text-gray-300">
+          I’m <span class="font-semibold text-red-600">Arne Drinovec</span>, a
+          certified personal trainer built to push limits and break barriers. My
+          mission? To help you tap into your full potential with raw intensity,
+          discipline, and customized training.
+        </p>
+        <p class="mt-4 text-lg leading-relaxed text-gray-300">
+          Fitness isn’t a hobby—it’s a
+          <span class="font-semibold text-red-500">lifestyle</span>. The moment
+          I committed to it, my life changed forever. Strength, confidence, and
+          an unstoppable mindset—this is what training has given me.
+        </p>
+        <p class="mt-4 text-lg leading-relaxed text-gray-300">
+          If you're ready to go <span class="font-extrabold">all in</span>, to
+          push beyond limits, to embrace the grind, then let’s get to work. No
+          excuses. Only results.
+        </p>
+      </div>
     </section>
+
     <!-- SERVICES -->
     <section
       id="services"
-      class="h-screen grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 p-6 text-white text-center parallax sm:gap-4 justify-center items-center"
-      style="background-image: url('public/arne.webp')"
+      class="min-h-screen grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 text-white text-center overflow-hidden pb-20 parallax"
+      style="background-image: url('public/arne2.webp')"
     >
+      <h2
+        class="col-span-full text-4xl font-extrabold uppercase tracking-wide text-red-600 mb-8"
+      >
+        Dominate Your Fitness Journey
+      </h2>
+
       <!-- Service Cards -->
       <div
         data-aos="fade-up"
-        class="relative p-6 rounded-lg flex flex-col items-center transition-transform duration-300 hover:-translate-y-2"
+        class="relative p-6 rounded-lg flex flex-col items-center bg-zinc-900/40 border border-red-700 shadow-lg"
       >
-        <h2 class="text-lg sm:text-2xl font-semibold">
+        <h2 class="text-lg sm:text-2xl font-bold text-red-500 uppercase">
           Personalized Training Plans
         </h2>
-        <p class="mt-2 text-sm sm:text-base">
-          Custom workout routines based on fitness level, goals, and lifestyle.
+        <p class="mt-2 text-sm sm:text-base text-gray-300">
+          Custom workouts tailored to your body, goals, and drive.
         </p>
       </div>
 
       <div
         data-aos="fade-up"
         data-aos-delay="300"
-        class="relative p-6 rounded-lg flex flex-col items-center transition-transform duration-300 hover:-translate-y-2"
+        class="relative p-6 rounded-lg flex flex-col items-center bg-zinc-900/40 border border-red-700"
       >
-        <h2 class="text-lg sm:text-2xl font-semibold">
+        <h2 class="text-lg sm:text-2xl font-bold text-red-500 uppercase">
           1-on-1 Virtual Coaching
         </h2>
-        <p class="mt-2 text-sm sm:text-base">
-          Live video sessions for personalized guidance & motivation.
+        <p class="mt-2 text-sm sm:text-base text-gray-300">
+          Personal, live coaching to keep you on track.
         </p>
       </div>
 
       <div
         data-aos="fade-up"
         data-aos-delay="400"
-        class="relative p-6 rounded-lg flex flex-col items-center transition-transform duration-300 hover:-translate-y-2"
+        class="relative p-6 rounded-lg flex flex-col items-center bg-zinc-900/40 border border-red-700"
       >
-        <h2 class="text-lg sm:text-2xl font-semibold">
+        <h2 class="text-lg sm:text-2xl font-bold text-red-500 uppercase">
           On-Demand Video Workouts
         </h2>
-        <p class="mt-2 text-sm sm:text-base">
-          A library of pre-recorded workouts categorized by level & type.
+        <p class="mt-2 text-sm sm:text-base text-gray-300">
+          A hardcore library of workouts—ready when you are.
         </p>
       </div>
 
       <div
         data-aos="fade-up"
         data-aos-delay="500"
-        class="relative p-6 rounded-lg flex flex-col items-center transition-transform duration-300 hover:-translate-y-2"
+        class="relative p-6 rounded-lg flex flex-col items-center bg-zinc-900/40 border border-red-700"
       >
-        <h2 class="text-lg sm:text-2xl font-semibold">Posture & Form Checks</h2>
-        <p class="mt-2 text-sm sm:text-base">
-          Clients send videos and receive feedback on their technique.
+        <h2 class="text-lg sm:text-2xl font-bold text-red-500 uppercase">
+          Posture & Form Checks
+        </h2>
+        <p class="mt-2 text-sm sm:text-base text-gray-300">
+          Get direct feedback to perfect your form.
         </p>
       </div>
 
       <div
         data-aos="fade-up"
         data-aos-delay="600"
-        class="relative p-6 rounded-lg flex flex-col items-center transition-transform duration-300 hover:-translate-y-2"
+        class="relative p-6 rounded-lg flex flex-col items-center bg-zinc-900/40 border border-red-700"
       >
-        <h2 class="text-lg sm:text-2xl font-semibold">
+        <h2 class="text-lg sm:text-2xl font-bold text-red-500 uppercase">
           Calorie & Macro Tracking
         </h2>
-        <p class="mt-2 text-sm sm:text-base">
-          Teaching clients how to track effectively.
+        <p class="mt-2 text-sm sm:text-base text-gray-300">
+          Learn how to fuel your training properly.
         </p>
       </div>
 
       <div
         data-aos="fade-up"
         data-aos-delay="700"
-        class="relative p-6 rounded-lg flex flex-col items-center transition-transform duration-300 hover:-translate-y-2"
+        class="relative p-6 rounded-lg flex flex-col items-center bg-zinc-900/40 border border-red-700"
       >
-        <h2 class="text-lg sm:text-2xl font-semibold">Supplement Advice</h2>
-        <p class="mt-2 text-sm sm:text-base">
-          Guidance on whether supplements are needed & how to use them.
+        <h2 class="text-lg sm:text-2xl font-bold text-red-500 uppercase">
+          Supplement Advice
+        </h2>
+        <p class="mt-2 text-sm sm:text-base text-gray-300">
+          Smart guidance on supplementation—no BS.
         </p>
       </div>
     </section>
+
     <!-- CLIENT REVIEWS -->
     <section
       id="testimonials"
-      class="py-20 px-6 text-center border-t border-indigo-900 bg-gradient-to-b from-purple-900 to-black"
+      class="py-20 px-6 text-center bg-black border-t border-b border-gray-700"
     >
-      <h2 class="text-3xl font-bold">Client Testimonials</h2>
-      <div data-aos="zoom-in" class="max-w-3xl mx-auto mt-6 space-y-6">
-        <blockquote class="p-4 bg-black/70 rounded-lg">
-          <p class="italic">
-            "Arne's training plans helped me lose 10kg in 3 months!"
+      <h2
+        data-aos="fade-up"
+        class="text-4xl sm:text-5xl font-extrabold text-white uppercase tracking-wider"
+      >
+        Unstoppable Transformations
+      </h2>
+
+      <div data-aos="zoom-in" class="max-w-3xl mx-auto mt-10 space-y-8">
+        <blockquote
+          class="p-6 sm:p-8 bg-black/80 border border-red-700 rounded-xl shadow-lg shadow-red-500/30 hover:scale-105 transition-transform duration-300"
+        >
+          <p class="text-lg sm:text-2xl font-semibold italic text-gray-300">
+            "Arne’s training plans helped me **shred 10kg** in 3 months!"
           </p>
-          <span class="block text-amber-300 mt-2">- Jane Doe</span>
+          <span
+            class="block text-xl sm:text-2xl font-bold text-amber-400 mt-4 glow"
+          >
+            – Jane Doe
+          </span>
         </blockquote>
-        <blockquote class="p-4 bg-black/70 rounded-lg">
-          <p class="italic">
-            "Best coach ever! My strength has doubled in 6 months!"
+
+        <blockquote
+          class="p-6 sm:p-8 bg-black/80 border border-red-700 rounded-xl shadow-lg shadow-red-500/30 hover:scale-105 transition-transform duration-300"
+        >
+          <p class="text-lg sm:text-2xl font-semibold italic text-gray-300">
+            "**Best coach ever!** My strength has **doubled** in 6 months!"
           </p>
-          <span class="block text-amber-300 mt-2">- John Smith</span>
+          <span
+            class="block text-xl sm:text-2xl font-bold text-amber-400 mt-4 glow"
+          >
+            – John Smith
+          </span>
         </blockquote>
       </div>
     </section>
 
-    <!-- <section id="contact" class="py-20 px-6 text-center bg-purple-900">
-      <h2 class="text-3xl font-bold">Contact Me</h2>
-      <p class="mt-4 max-w-2xl mx-auto">
-        Get in touch for coaching inquiries and start your fitness journey
-        today!
-      </p>
-    </section> -->
+    <section
+      id="quote"
+      class="min-h-screen grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 text-white text-center overflow-hidden pb-20 parallax"
+      style="background-image: url('public/arne3.webp')"
+    >
+      <!-- Quote Section -->
+      <div class="flex flex-col justify-center items-start px-6 md:px-12">
+        <blockquote
+          class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white leading-relaxed"
+        >
+          "The grind never stops. You don’t rise by lifting others—you rise by
+          lifting yourself."
+        </blockquote>
+        <span class="text-lg sm:text-xl mt-4 text-yellow-300 font-semibold"
+          >- Arne Drinovec</span
+        >
+      </div>
+    </section>
 
-    <footer class="p-10 text-center border-t border-indigo-900">
+    <!-- CONTACT SECTION -->
+    <section
+      id="contact"
+      class="py-20 px-6 text-center bg-black border-t border-b border-gray-700 text-white"
+    >
+      <h2
+        class="text-4xl sm:text-5xl font-extrabold text-yellow-400 uppercase tracking-wide"
+      >
+        Get in Touch
+      </h2>
+      <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-300 leading-relaxed">
+        Ready to break your limits and start your
+        <span class="font-semibold text-yellow-300">fitness journey</span>?
+        <br />
+        Drop me a message and let’s
+        <span class="font-semibold text-yellow-300">build your beast mode</span>
+        💪
+      </p>
+
+      <!-- Email Form -->
+      <div class="mt-8 flex flex-col items-center gap-4">
+        <input
+          type="email"
+          placeholder="Enter your email"
+          class="w-80 px-5 py-3 text-black text-lg rounded-md shadow-lg border border-white focus:border-red-500 focus:ring focus:ring-red-400 outline-none placeholder-gray-500 transition duration-300 hover:ring-2 hover:ring-red-500"
+          aria-label="Enter your email"
+        />
+        <button
+          class="px-6 py-3 text-lg font-bold text-black bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300 hover:shadow-yellow-500 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-400"
+        >
+          Contact Me
+        </button>
+      </div>
+
+      <!-- Contact Details -->
+      <div class="mt-8 text-lg text-gray-300">
+        📧 Hit me up at:
+        <a
+          href="mailto:your@email.com"
+          class="text-yellow-400 font-semibold hover:underline focus:ring-2 focus:ring-yellow-400 px-1"
+          >your@email.com</a
+        >
+      </div>
+    </section>
+
+    <section
+      id="quote"
+      class="min-h-screen grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 text-white text-center overflow-hidden pb-20 parallax"
+      style="background-image: url('public/arne5.webp')"
+    >
+      <!-- Quote Section -->
+      <div class="flex flex-col justify-end items-center px-6 md:px-12 py-6">
+        <blockquote
+          class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white leading-relaxed"
+        >
+          "Pain is temporary. Quitting lasts forever."
+        </blockquote>
+        <span class="text-lg sm:text-xl mt-4 text-yellow-300 font-semibold"
+          >- Arne Drinovec</span
+        >
+      </div>
+    </section>
+
+    <footer class="p-10 text-center border-t border-gray-700">
       <p data-aos="zoom-in" class="text-lg text-gray-400 mb-4">
         Follow on Social Media
       </p>
