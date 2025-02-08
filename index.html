@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="public/A.png" />
     <title>Personal Trainer | Arne Drinovec</title>
     <link rel="stylesheet" href="src/output.css" />
     <link
@@ -16,6 +17,7 @@
     <script src="//unpkg.com/alpinejs" defer></script>
   </head>
   <body class="bg-black text-white overflow-x-hidden" x-data="{ open: false }">
+    <!-- HEADER N NAVI BAR -->
     <header
       class="relative z-20 bg-gradient-to-r from-purple-900/20 to-amber-300/80 border border-amber-100"
     >
@@ -82,17 +84,20 @@
         >
       </div>
     </header>
-
+<!-- HERO SECTION -->
     <section
       id="home"
-      class="h-screen flex justify-center items-center text-center text-white parallax"
+      class="h-screen flex justify-center items-center text-center text-wrap text-white parallax"
       style="background-image: url('public/arne.webp')"
     >
-      <h2 class="text-4xl font-bold p-4 rounded-lg">
+      <h2
+        data-aos="zoom-in"
+        class="text-2xl font-semibold p-4 rounded-lg bg-black/50 sm:text-4xl sm:font-bold"
+      >
         Achieve Your Fitness Goals
       </h2>
     </section>
-
+<!-- ABOUT -->
     <section
       id="about"
       class="py-20 px-6 text-center bg-gradient-to-r from-purple-900/20 to-amber-300/80 border-t border-b border-amber-100"
@@ -103,7 +108,7 @@
         you achieve your fitness goals through customized coaching and guidance.
       </p>
     </section>
-
+<!-- SERVICES -->
     <section
       id="services"
       class="h-screen grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 p-6 text-white text-center parallax sm:gap-4 justify-center items-center"
@@ -111,6 +116,7 @@
     >
       <!-- Service Cards -->
       <div
+        data-aos="fade-up"
         class="relative p-6 rounded-lg flex flex-col items-center transition-transform duration-300 hover:-translate-y-2"
       >
         <h2 class="text-lg sm:text-2xl font-semibold">
@@ -122,6 +128,8 @@
       </div>
 
       <div
+        data-aos="fade-up"
+        data-aos-delay="300"
         class="relative p-6 rounded-lg flex flex-col items-center transition-transform duration-300 hover:-translate-y-2"
       >
         <h2 class="text-lg sm:text-2xl font-semibold">
@@ -133,6 +141,8 @@
       </div>
 
       <div
+        data-aos="fade-up"
+        data-aos-delay="400"
         class="relative p-6 rounded-lg flex flex-col items-center transition-transform duration-300 hover:-translate-y-2"
       >
         <h2 class="text-lg sm:text-2xl font-semibold">
@@ -144,6 +154,8 @@
       </div>
 
       <div
+        data-aos="fade-up"
+        data-aos-delay="500"
         class="relative p-6 rounded-lg flex flex-col items-center transition-transform duration-300 hover:-translate-y-2"
       >
         <h2 class="text-lg sm:text-2xl font-semibold">Posture & Form Checks</h2>
@@ -153,6 +165,8 @@
       </div>
 
       <div
+        data-aos="fade-up"
+        data-aos-delay="600"
         class="relative p-6 rounded-lg flex flex-col items-center transition-transform duration-300 hover:-translate-y-2"
       >
         <h2 class="text-lg sm:text-2xl font-semibold">
@@ -164,6 +178,8 @@
       </div>
 
       <div
+        data-aos="fade-up"
+        data-aos-delay="700"
         class="relative p-6 rounded-lg flex flex-col items-center transition-transform duration-300 hover:-translate-y-2"
       >
         <h2 class="text-lg sm:text-2xl font-semibold">Supplement Advice</h2>
