@@ -12,3 +12,20 @@ html {
   background-size: cover;
   background-position: center;
 }
+
+.swiper-button-prev {
+  color: red;
+}
+
+.swiper-button-next {
+  color: red;
+}
+
+.swiper-pagination-bullet {
+  background-color: white !important; /* Change bullet color */
+  opacity: 1; /* Make them fully visible */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: red !important; /* Change active bullet color */
+}

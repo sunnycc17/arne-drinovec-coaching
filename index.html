@@ -26,6 +26,12 @@
 
     <meta name="author" content="sunnycc17_" />
 
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <link rel="icon" type="image/png" href="/public/A.png" />
     <title>Personal Trainer | Arne Drinovec</title>
     <link rel="stylesheet" href="src/output.css" />
@@ -277,9 +283,10 @@
     </section>
 
     <!-- CLIENT REVIEWS -->
+
     <section
       id="testimonials"
-      class="py-20 px-6 text-center bg-black border-t border-b border-gray-700"
+      class="py-20 px-4 sm:px-6 text-center bg-black border-t border-b border-gray-700 overflow-x-hidden"
     >
       <h2
         data-aos="fade-up"
@@ -288,9 +295,46 @@
         Unstoppable Transformations
       </h2>
 
+      <!-- Slider main container -->
+      <div class="swiper m-10">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img
+              class="object-cover w-[282px] h-[416px]"
+              src="public/arne6.png"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img class="w-[282px] h-[416px] object-cover"
+            src="public/arne5.webp"" />
+          </div>
+          <div class="swiper-slide">
+            <img
+              class="w-[282px] h-[416px] object-cover"
+              src="public/arne3.webp"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              class="w-[282px] h-[416px] object-cover"
+              src="public/arne4.webp"
+            />
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination dot"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+
+      <!-- Testimonials -->
       <div data-aos="zoom-in" class="max-w-3xl mx-auto mt-10 space-y-8">
         <blockquote
-          class="p-6 sm:p-8 bg-black/80 border border-red-700 rounded-xl shadow-lg shadow-red-500/30 hover:scale-105 transition-transform duration-300"
+          class="p-6 sm:p-8 bg-black/80 border border-red-700 rounded-xl shadow-lg shadow-red-500/30"
         >
           <p class="text-lg sm:text-2xl font-semibold italic text-gray-300">
             "Arne’s training plans helped me
@@ -305,7 +349,7 @@
         </blockquote>
 
         <blockquote
-          class="p-6 sm:p-8 bg-black/80 border border-red-700 rounded-xl shadow-lg shadow-red-500/30 hover:scale-105 transition-transform duration-300"
+          class="p-6 sm:p-8 bg-black/80 border border-red-700 rounded-xl shadow-lg shadow-red-500/30"
         >
           <p class="text-lg sm:text-2xl font-semibold italic text-gray-300">
             "<span class="font-extrabold text-red-500">Best coach ever</span>!
@@ -321,6 +365,7 @@
       </div>
     </section>
 
+    <!-- QUOTE 1 -->
     <section
       id="quote"
       class="relative min-h-screen grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 text-white text-center overflow-hidden pb-20 parallax"
@@ -380,6 +425,7 @@
       </div>
     </section>
 
+    <!-- QUOTE 2 -->
     <section
       id="quote"
       class="relative min-h-screen grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 text-white text-center overflow-hidden pb-20 parallax"
@@ -450,12 +496,39 @@
   </body>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     AOS.init({
       duration: 600, // Animation duration in milliseconds (default: 400)
       easing: "ease-in-out", // Animation easing type
       delay: 200, // Delay before animation starts (in ms)
       once: true, // Whether animation should happen only once
+    });
+
+    const swiper = new Swiper(".swiper", {
+      // Default parameters
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 10,
+      loop: true,
+
+      // Optional parameters
+      direction: "horizontal",
+
+      // If we need pagination
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      freeMode: true,
+      keyboard: { enabled: true },
     });
   </script>
 </html>
