@@ -563,9 +563,6 @@
       max-width: 96rem;
     }
   }
-  .m-5 {
-    margin: calc(var(--spacing) * 5);
-  }
   .m-10 {
     margin: calc(var(--spacing) * 10);
   }
@@ -608,17 +605,8 @@
   .inline-block {
     display: inline-block;
   }
-  .h-\[416\] {
-    height: 416;
-  }
   .h-\[416px\] {
     height: 416px;
-  }
-  .h-\[600px\] {
-    height: 600px;
-  }
-  .h-full {
-    height: 100%;
   }
   .h-screen {
     height: 100vh;
@@ -626,17 +614,8 @@
   .min-h-screen {
     min-height: 100vh;
   }
-  .w-\[200px\] {
-    width: 200px;
-  }
-  .w-\[280px\] {
-    width: 280px;
-  }
   .w-\[282px\] {
     width: 282px;
-  }
-  .w-\[300px\] {
-    width: 300px;
   }
   .w-full {
     width: 100%;
@@ -732,9 +711,6 @@
   .bg-black\/80 {
     background-color: color-mix(in oklab, var(--color-black) 80%, transparent);
   }
-  .bg-green-800 {
-    background-color: var(--color-green-800);
-  }
   .bg-red-600 {
     background-color: var(--color-red-600);
   }
@@ -753,6 +729,12 @@
   }
   .bg-\[url\(\'\/public\/arne5\.webp\'\)\] {
     background-image: url('/public/arne5.webp');
+  }
+  .bg-\[url\(\'public\/arne3\.webp\'\)\] {
+    background-image: url('public/arne3.webp');
+  }
+  .bg-\[url\(\'public\/arne5\.webp\'\)\] {
+    background-image: url('public/arne5.webp');
   }
   .from-red-600 {
     --tw-gradient-from: var(--color-red-600);
