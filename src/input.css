@@ -35,3 +35,17 @@ html {
   justify-content: center;
   align-items: center;
 }
+
+@media (width >= 64rem /* 1024px */) {
+  .swiper-button-prev {
+    color: blue;
+  }
+
+  .swiper-button-next {
+    color: blue;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: blue !important; /* Change active bullet color */
+  }
+}
