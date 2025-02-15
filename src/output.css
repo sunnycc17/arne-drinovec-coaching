@@ -761,6 +761,12 @@
   .bg-center {
     background-position: center;
   }
+  .bg-left {
+    background-position: left;
+  }
+  .bg-right {
+    background-position: right;
+  }
   .object-cover {
     object-fit: cover;
   }
@@ -1031,11 +1037,6 @@
       display: none;
     }
   }
-  .md\:w-\[40\%\] {
-    @media (width >= 48rem) {
-      width: 40%;
-    }
-  }
   .md\:w-\[60\%\] {
     @media (width >= 48rem) {
       width: 60%;
@@ -1065,11 +1066,6 @@
   .lg\:w-\[55\%\] {
     @media (width >= 64rem) {
       width: 55%;
-    }
-  }
-  .lg\:w-\[60\%\] {
-    @media (width >= 64rem) {
-      width: 60%;
     }
   }
   .lg\:grid-cols-3 {
